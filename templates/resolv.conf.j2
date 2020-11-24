@@ -1,7 +1,7 @@
 domain {{ domain_name }}
-search {%- for search_domain in search_domains -%}{{ search_domain}} {% endfor %}
+search {% for search_domain in search_domains -%}{{ search_domain}} {% endfor %}
 
 {% for nameserver in nameservers %}
 nameserver {{ nameserver }}
-{% endfor %}}
+{% endfor %}
 
