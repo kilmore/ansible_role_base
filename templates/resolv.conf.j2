@@ -1,3 +1,7 @@
-search           lab.blackhand 
-domain           lab.blackhand
-nameserver       5.5.5.5
+domain {{ domain_name }}
+search {%- for search_domain in search_domains -%} 
+
+{% for nameserver in nameservers %}
+nameserver {{ nameserver }}
+{% endfor %}}
+
