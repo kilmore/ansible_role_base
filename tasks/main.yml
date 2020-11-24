@@ -27,7 +27,4 @@
         backup: yes
       notify:
         - reload NetworkManager
-  when: 
-    - {{ domain_name }} is defined
-    - {{ search_domains }} is defined
-    - {{ nameservers }} is defined 
+  when: domain_name is defined and search_domains is defined and nameservers is defined 
